@@ -1,0 +1,366 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Librería Jurídica | APECC - Asociación Peruana de Ciencias Jurídicas y Conciliación" description="Asociación Peruana de Ciencias Jurídicas y Conciliación" activePage="libreria">
+<!-- Hero Banner -->
+        <div class="py-7 py-lg-10" style="background-color: #01254D;">
+            <div class="container text-center text-white">
+                <span class="badge px-3 py-2 rounded-pill mb-3" style="background-color: #F49685; color: #FFFFFF; font-weight: 600;">
+                    Editorial Jurídica APECC
+                </span>
+                <h1 class="display-4 text-white fw-bold mb-3">Librería Jurídica Especializada</h1>
+                <p class="lead mx-auto mb-4" style="max-width: 44rem; color: #F0EADC;">
+                    Obras doctrinarias, manuales prácticos y tratados de litigación oral del Dr. Oscar Peña Gonzáles y destacados juristas del país.
+                </p>
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-light justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="/" style="color: #F7B0AB;">Inicio</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Librería</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- End Hero Banner -->
+
+        <!-- Features Bar -->
+        <div class="py-4 border-bottom" style="background-color: #F0EADC;">
+            <div class="container">
+                <div class="row g-3 text-center text-md-start align-items-center">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start">
+                        <i class="bi-truck fs-3 me-3" style="color: #F49685;"></i>
+                        <div>
+                            <strong class="d-block" style="color: #01254D;">Envíos a Todo el Perú</strong>
+                            <small style="color: #5D7695;">Entrega rápida y segura a nivel nacional</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                        <i class="bi-shield-check fs-3 me-3" style="color: #01254D;"></i>
+                        <div>
+                            <strong class="d-block" style="color: #01254D;">Obras 100% Originales</strong>
+                            <small style="color: #5D7695;">Publicaciones oficiales de Editorial APECC</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
+                        <i class="bi-credit-card fs-3 me-3" style="color: #F49685;"></i>
+                        <div>
+                            <strong class="d-block" style="color: #01254D;">Compra Fácil y Segura</strong>
+                            <small style="color: #5D7695;">Pago online o transferencia bancaria</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Features Bar -->
+
+        <!-- Catálogo de Libros -->
+        <div class="py-7 py-lg-10" style="background-color: #FFFFFF;">
+            <div class="container">
+                <!-- Filtros y Búsqueda -->
+                <div class="row justify-content-between align-items-center mb-5 g-3">
+                    <div class="col-lg-8">
+                        <div class="d-flex flex-wrap gap-2" id="filter-buttons">
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn active" data-filter="all">Todos los Libros</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn" data-filter="litigacion">Litigación Oral</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn" data-filter="penal">Derecho Penal</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn" data-filter="conciliacion">Conciliación</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 filter-btn" data-filter="civil">Derecho Civil</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0" style="color: #5D7695;"><i class="bi-search"></i></span>
+                            <input type="text" id="search-book" class="form-control bg-light border-start-0" placeholder="Buscar libro por título...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid de Libros -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="books-grid">
+
+                    <!-- Libro 1 -->
+                    <div class="col book-item" data-category="penal litigacion">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Teoria-del-Caso.jpg" alt="Teoría del Caso" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                                <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1" style="background-color: #F49685; color: #FFFFFF;">Destacado</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Editorial APECC</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Teoría del Caso</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Metodología práctica para la construcción de la teoría del caso en el proceso penal acusatorio.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 15.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3284" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 2 -->
+                    <div class="col book-item" data-category="civil">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Balotario-Desarrollado-civil.jpg" alt="Balotario Desarrollado Civil" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Editorial APECC</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Balotario Desarrollado Civil</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Preguntas clave y casos prácticos de Derecho Civil para postulantes a magistrados y profesionales.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 50.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3287" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 3 -->
+                    <div class="col book-item" data-category="penal">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Codigo-Penal.jpg" alt="Código Penal Comentado" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Editorial APECC</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Código Penal Comentado</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Guía práctica, concordada y analítica del Código Penal Peruano con jurisprudencia reciente.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 35.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3289" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 4 -->
+                    <div class="col book-item" data-category="conciliacion">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Conciliacion-Extrajudicial.jpg" alt="Conciliación Extrajudicial" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                                <span class="badge position-absolute top-0 start-0 m-3 px-2 py-1" style="background-color: #01254D; color: #FFFFFF;">Recomendado</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Dr. Oscar Peña Gonzáles</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Conciliación Extrajudicial: Teoría y Práctica</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Tratado integral de resolución de conflictos, técnicas de negociación y audiencias conciliatorias.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 60.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3291" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 5 -->
+                    <div class="col book-item" data-category="litigacion">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Contrainterrogatorio.jpg" alt="El Contrainterrogatorio" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Dr. Oscar Peña Gonzáles</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">El Contrainterrogatorio</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Técnicas avanzadas para el contrainterrogatorio de testigos y peritos en el juicio oral.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 50.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3293" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 6 -->
+                    <div class="col book-item" data-category="litigacion">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/El-Contrainterrogatorio-como-arma-fundamental-en-el-juzgamiento.jpg" alt="Contrainterrogatorio como Arma Fundamental" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Dr. Oscar Peña Gonzáles</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Contrainterrogatorio como Arma Fundamental</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Estrategias procesales de alta eficacia para desmontar testimonios contrarios en audiencia.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 50.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3295" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 7 -->
+                    <div class="col book-item" data-category="penal">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/El-delito-de-lavado-de-activos.jpg" alt="El Delito de Lavado de Activos" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Editorial APECC</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">El Delito de Lavado de Activos</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Dogmática penal, tipicidad y análisis probatorio del lavado de activos en el Perú.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 30.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3297" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 8 -->
+                    <div class="col book-item" data-category="litigacion">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/El-interrogatorio-Directo.jpg" alt="El Interrogatorio Directo" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Dr. Oscar Peña Gonzáles</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">El Interrogatorio Directo</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Cómo acreditar testigos, formular preguntas abiertas y obtener testimonios persuasivos.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 15.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3299" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 9 -->
+                    <div class="col book-item" data-category="litigacion">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Manual-de-Argumentacion-Juridica.jpg" alt="Manual de Argumentación Jurídica" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Dr. Oscar Peña Gonzáles</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Manual de Argumentación Jurídica</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Razonamiento lógico-jurídico aplicado a la redacción de resoluciones, demandas y alegatos.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 40.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3301" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 10 -->
+                    <div class="col book-item" data-category="penal">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Teoria-del-Delito.jpg" alt="Teoría del Delito" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Peña Gonzáles & Almanza</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Teoría del Delito</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Tipicidad, antijuricidad y culpabilidad aplicadas a casos prácticos reales.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 60.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3303" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libro 11 -->
+                    <div class="col book-item" data-category="litigacion">
+                        <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden book-card" style="background-color: #FFFFFF; border: 1px solid rgba(1,37,77,0.06) !important;">
+                            <div class="position-relative p-3 text-center" style="background-color: #F0EADC; min-height: 280px; display: flex; align-items: center; justify-content: center;">
+                                <img src="https://apecc.com.pe/noticias/wp-content/uploads/2026/10/Tecnicas-de-Litigacion-Oral.jpg" alt="Técnicas de Litigación Oral" class="img-fluid rounded shadow-sm" style="max-height: 240px; object-fit: contain;">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge mb-2 w-auto align-self-start" style="background-color: #F0EADC; color: #01254D;">Dr. Oscar Peña Gonzáles</span>
+                                <h5 class="card-title fw-bold mb-2 book-title" style="color: #01254D;">Técnicas de Litigación Oral</h5>
+                                <p class="card-text small flex-grow-1" style="color: #5D7695;">Alegatos de apertura, objeciones, examen de testigos y alegato de clausura.</p>
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-2" style="border-color: #F0EADC !important;">
+                                    <span class="fs-4 fw-bold" style="color: #01254D;">S/ 50.00</span>
+                                    <a href="https://apecc.com.pe/noticias/carrito/?add-to-cart=3305" target="_blank" class="btn btn-sm rounded-pill px-3" style="background-color: #F49685; color: #FFFFFF;">
+                                        <i class="bi-cart-plus me-1"></i> Comprar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Grid de Libros -->
+
+                <!-- CTA Banner -->
+                <div class="mt-8 p-5 rounded-3 text-center" style="background-color: #01254D;">
+                    <span class="badge px-3 py-2 rounded-pill mb-3" style="background-color: #F49685; color: #FFFFFF; font-weight: 600;">
+                        Atención Personalizada
+                    </span>
+                    <h3 class="text-white mb-3">¿Deseas pedidos corporativos o asesoría en compras?</h3>
+                    <p class="lead mb-4" style="color: #F0EADC;">Realizamos envíos a todo Lima y provincias por Olva Courier y agencias autorizadas.</p>
+                    <a href="https://wa.me/51996894994?text=Hola,%20deseo%20adquirir%20libros%20de%20la%20Librer%C3%ADa%20Jur%C3%ADdica%20APECC" target="_blank" class="btn btn-lg rounded-pill px-5 fw-bold" style="background-color: #F49685; color: #FFFFFF;">
+                        <i class="bi-whatsapp me-2"></i> Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Catálogo de Libros -->
+<script is:inline>
+(function() {
+            new HSMegaMenu('.js-mega-menu', {
+                desktop: { position: 'left' }
+            });
+            new HSHeader('#header').init();
+
+            // Client-side Book Filtering and Search
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const searchInput = document.getElementById('search-book');
+            const bookItems = document.querySelectorAll('.book-item');
+
+            function applyFilters() {
+                const activeBtn = document.querySelector('.filter-btn.active');
+                const filterValue = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+                const query = searchInput.value.toLowerCase().trim();
+
+                bookItems.forEach(item => {
+                    const category = item.getAttribute('data-category') || '';
+                    const title = item.querySelector('.book-title').textContent.toLowerCase();
+
+                    const matchesCategory = (filterValue === 'all') || category.includes(filterValue);
+                    const matchesSearch = !query || title.includes(query);
+
+                    if (matchesCategory && matchesSearch) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    applyFilters();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', applyFilters);
+            }
+        })();
+</script>
+</Layout>

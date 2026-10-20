@@ -1,0 +1,160 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  activePage?: string;
+}
+
+const {
+  title = "APECC - Asociación Peruana de Ciencias Jurídicas y Conciliación",
+  description = "Asociación Peruana de Ciencias Jurídicas y Conciliación. Más de 25 años dedicados a la formación, capacitación y especialización de profesionales del Derecho.",
+  activePage = ""
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="/images/logo.webp">
+    <meta property="og:locale" content="es_PE">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/webp" href="/images/logo.webp">
+    <link rel="icon" type="image/webp" href="/images/logo.webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/themes/front/vendor/bootstrap-icons/font/bootstrap-icons.966e172f3868.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/themes/front/vendor/hs-mega-menu/dist/hs-mega-menu.min.8a14ccdd5d5a.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/themes/front/vendor/aos/dist/aos.847da8fca806.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/themes/front/vendor/tom-select/dist/css/tom-select.bootstrap5.f2bf88d01733.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/themes/front/vendor/swiper/swiper-bundle.min.9f19bcd39090.css">
+
+    <!-- CSS Front Template & Custom -->
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/themes/front/css/theme.min.ff1bcf5ac243.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/assets/sweetalert2/sweetalert2.min.70496681a0ff.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/assets/freeze-ui/udea-freeze-ui.5a05a7fe509d.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/assets/leaflet/dist/leaflet.e940e76ab990.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/assets/toastify-js/toastify.2424a9f0a07f.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/css/home_v3.57ec72448355.css">
+    <link rel="stylesheet" href="https://colegioabogados.org.pe/static/css/course_reviews.ada16570ccfa.css">
+
+    <!-- Paleta Personalizada APECC -->
+    <style is:inline>
+        :root {
+            --apecc-navy: #01254D;
+            --apecc-slate: #5D7695;
+            --apecc-blush: #F7B0AB;
+            --apecc-coral: #F49685;
+            --apecc-sand: #F0EADC;
+            --apecc-white: #FFFFFF;
+        }
+        .text-navy { color: #01254D !important; }
+        .text-slate { color: #5D7695 !important; }
+        .text-coral { color: #F49685 !important; }
+        .text-blush { color: #F7B0AB !important; }
+        .bg-navy { background-color: #01254D !important; color: #FFFFFF !important; }
+        .bg-slate { background-color: #5D7695 !important; color: #FFFFFF !important; }
+        .bg-sand { background-color: #F0EADC !important; }
+        .bg-coral { background-color: #F49685 !important; color: #FFFFFF !important; }
+        .bg-blush { background-color: #F7B0AB !important; }
+        .border-coral { border-color: #F49685 !important; }
+        .border-navy { border-color: #01254D !important; }
+        .border-sand { border-color: #F0EADC !important; }
+    </style>
+</head>
+<body>
+    <Header activePage={activePage} />
+
+    <main id="content" role="main">
+        <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Go To -->
+    <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+        data-hs-go-to-options='{
+            "pageOffset": 300,
+            "offsetTop": 0,
+            "position": {
+                "init": {
+                    "right": "2rem"
+                },
+                "show": {
+                    "bottom": "2rem"
+                },
+                "hide": {
+                    "bottom": "-2rem"
+                }
+            }
+        }'>
+        <i class="bi-chevron-up"></i>
+    </a>
+
+    <!-- Scripts Globales -->
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/bootstrap/dist/js/bootstrap.bundle.min.d2b0d31f74e6.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/hs-header/dist/hs-header.min.d44b492eb735.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/hs-mega-menu/dist/hs-mega-menu.min.23c6648e21e1.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/hs-show-animation/dist/hs-show-animation.min.013bcad09dca.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/hs-go-to/dist/hs-go-to.min.3e6b34eeecdc.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/aos/dist/aos.d3718e34eeb0.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/hs-toggle-switch/dist/hs-toggle-switch.min.22614bbd7ae7.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/hs-sticky-block/dist/hs-sticky-block.min.ac03d0901d5c.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/tom-select/dist/js/tom-select.complete.f507a642d291.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/vendor/swiper/swiper-bundle.min.38ef180eaf57.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/themes/front/js/theme.min.358f7919f35c.js"></script>
+    <script is:inline src="https://colegioabogados.org.pe/static/assets/sweetalert2/sweetalert2.min.87c27fa1989c.js"></script>
+
+    <!-- Init Script -->
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof HSHeader !== 'undefined' && document.getElementById('header')) {
+                new HSHeader('#header').init();
+            }
+
+            if (typeof HSMegaMenu !== 'undefined') {
+                new HSMegaMenu('.js-mega-menu', {
+                    desktop: { position: 'left' }
+                });
+            }
+
+            if (typeof HSShowAnimation !== 'undefined') {
+                new HSShowAnimation('.js-animation-link');
+            }
+
+            if (typeof HSGoTo !== 'undefined') {
+                new HSGoTo('.js-go-to');
+            }
+
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 650, once: true });
+            }
+
+            if (typeof HSToggleSwitch !== 'undefined') {
+                new HSToggleSwitch('.js-toggle-switch');
+            }
+
+            if (typeof HSStickyBlock !== 'undefined') {
+                new HSStickyBlock('.js-sticky-block', {
+                    targetSelector: document.getElementById('header')?.classList.contains('navbar-fixed') ? '#header' : null
+                });
+            }
+        });
+    </script>
+</body>
+</html>

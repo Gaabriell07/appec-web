@@ -1,0 +1,753 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Cursos especializados | APECC - Asociación Peruana de Ciencias Jurídicas y Conciliación" description="Asociación Peruana de Ciencias Jurídicas y Conciliación" activePage="cursos">
+<!-- Banner -->
+        <div id="banner-container" class="container content-space-t-1">
+            <div class="bg-primary rounded-2 overflow-hidden gradient-x-overlay-sm-dark"
+                 style="background: url(https://colegioabogados.org.pe/static/img/banner/2.38406452acb1.jpg) right bottom no-repeat; background-size: cover;">
+                <div class="w-lg-50 py-8 px-6">
+                    <h1 class="display-4 text-white">Cursos especializados</h1>
+                    <p class="lead text-white mb-0">
+                        Accede a más de
+                        <span class="fw-semi-bold">568</span>
+                        cursos de corta duración y no pares de aprender.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Banner -->
+    
+
+    <!-- Card List -->
+    <div class="container content-space-1 content-space-md-2 content-space-b-lg-3">
+        <div class="row">
+            <div class="col-lg-3 mb-5 mb-lg-0">
+                <!-- Navbar -->
+                <div class="navbar-expand-lg">
+                    <!-- Navbar Toggle -->
+                    <div class="d-grid">
+                        <button id="mobile-navbar-button" type="button" class="navbar-toggler btn btn-white mb-3"
+                                data-bs-toggle="collapse" data-bs-target="#navbarVerticalNavMenuEg3"
+                                aria-label="Toggle navigation" aria-expanded="false"
+                                aria-controls="navbarVerticalNavMenuEg3">
+                            <span class="d-flex justify-content-between align-items-center">
+                                <span class="text-dark">Filtros de categoría</span>
+
+                                <span class="navbar-toggler-default">
+                                    <i class="bi-list"></i>
+                                </span>
+
+                                <span class="navbar-toggler-toggled">
+                                    <i class="bi-x"></i>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- End Navbar Toggle -->
+
+                    <div class="border border-lg-1 rounded py-lg-5 px-3">
+                        <h5 class="mb-5 h4 text-center d-none d-lg-block">Filtros de categoría</h5>
+
+                        <!-- Navbar Collapse -->
+                        <div id="navbarVerticalNavMenuEg3"
+                             class="collapse navbar-collapse w-100">
+                            <div id="shopNavCategories" class="nav nav-pills nav-vertical nav-no-vertical-line w-100">
+                                <!-- Todas -->
+                                <a class="nav-link text-wrap fw-bold px-0 active text-primary apecc-cat-filter" href="javascript:;" data-filter="all">
+                                    <i class="bi-grid nav-icon text-primary me-2"></i>
+                                    Todas las especialidades
+                                </a>
+
+                                <!-- Conciliación Extrajudicial -->
+                                <a class="nav-link dropdown-toggle text-wrap fw-bold px-0 collapsed apecc-cat-filter"
+                                   href="#" role="button"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#shopCatConciliacion"
+                                   aria-expanded="true"
+                                   aria-controls="shopCatConciliacion"
+                                   data-filter="cat-conciliacion">
+                                    <i class="bi-dash nav-icon text-primary"></i>
+                                    Conciliación Extrajudicial
+                                </a>
+                                <div id="shopCatConciliacion" class="nav-collapse collapse show px-0" data-bs-parent="#shopNavCategories">
+                                    <div class="ms-3 my-1">
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-conciliacion-familiar">
+                                            <i class="bi-dot"></i> Conciliación Familiar
+                                        </a>
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-conciliacion-formacion">
+                                            <i class="bi-dot"></i> Formación de Conciliadores
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Derecho Penal -->
+                                <a class="nav-link dropdown-toggle text-wrap fw-bold px-0 collapsed apecc-cat-filter"
+                                   href="#" role="button"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#shopCatPenal"
+                                   aria-expanded="true"
+                                   aria-controls="shopCatPenal"
+                                   data-filter="cat-penal">
+                                    <i class="bi-dash nav-icon text-primary"></i>
+                                    Derecho Penal y Procesal Penal
+                                </a>
+                                <div id="shopCatPenal" class="nav-collapse collapse show px-0" data-bs-parent="#shopNavCategories">
+                                    <div class="ms-3 my-1">
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-penal-corrupcion">
+                                            <i class="bi-dot"></i> Corrupción y Crimen Organizado
+                                        </a>
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-penal-delitos">
+                                            <i class="bi-dot"></i> Delitos Graves y Minería Ilegal
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Arbitraje -->
+                                <a class="nav-link dropdown-toggle text-wrap fw-bold px-0 collapsed apecc-cat-filter"
+                                   href="#" role="button"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#shopCatArbitraje"
+                                   aria-expanded="true"
+                                   aria-controls="shopCatArbitraje"
+                                   data-filter="cat-arbitraje">
+                                    <i class="bi-dash nav-icon text-primary"></i>
+                                    Arbitraje y Solución de Conflictos
+                                </a>
+                                <div id="shopCatArbitraje" class="nav-collapse collapse show px-0" data-bs-parent="#shopNavCategories">
+                                    <div class="ms-3 my-1">
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-arbitraje">
+                                            <i class="bi-dot"></i> Arbitraje Especializado
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Pasantías Internacionales -->
+                                <a class="nav-link dropdown-toggle text-wrap fw-bold px-0 collapsed apecc-cat-filter"
+                                   href="#" role="button"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#shopCatPasantias"
+                                   aria-expanded="true"
+                                   aria-controls="shopCatPasantias"
+                                   data-filter="cat-pasantias">
+                                    <i class="bi-dash nav-icon text-primary"></i>
+                                    Pasantías Internacionales
+                                </a>
+                                <div id="shopCatPasantias" class="nav-collapse collapse show px-0" data-bs-parent="#shopNavCategories">
+                                    <div class="ms-3 my-1">
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-pasantia-argentina">
+                                            <i class="bi-dot"></i> Argentina
+                                        </a>
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-pasantia-brasil">
+                                            <i class="bi-dot"></i> Brasil
+                                        </a>
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-pasantia-miami">
+                                            <i class="bi-dot"></i> EE.UU. (Miami)
+                                        </a>
+                                        <a class="nav-link text-wrap py-1 text-muted apecc-cat-filter" href="javascript:;" data-filter="cat-pasantia-medellin">
+                                            <i class="bi-dot"></i> Colombia (Medellín)
+                                        </a>
+                                    </div>
+                                </div></div>
+                        </div>
+                        <!-- End Navbar Collapse -->
+                    </div>
+                </div>
+                <!-- End Navbar -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col-lg-9">
+                <!-- Filter -->
+                <div class="border-bottom pb-3 mb-5">
+                    <div class="row justify-content-between align-items-center">
+                        <h3 class="mb-0 col-md-6 order-2 order-md-1 mt-3 mt-md-0">
+                            <span class="text-dark fw-semi-bold">
+                                <span id="apeccCourseCount">9 programas</span>
+                            </span>
+                            encontrados
+                            
+                        </h3>
+
+                        <form action="/buscar/" class="col-md-6 order-1 order-md-2">
+                            <!-- Input Card -->
+                            <div class="input-card border">
+                                <div class="input-card-form">
+                                    <label for="searchForm" class="form-label visually-hidden">
+                                        Encuentra algo que aprender
+                                    </label>
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-prepend input-group-text">
+                                            <i class="bi-search"></i>
+                                        </span>
+                                        <input type="text"
+                                               class="form-control"
+                                               id="searchForm"
+                                               name="q"
+                                               placeholder="Encuentra algo que aprender"
+                                               aria-label="Encuentra algo que aprender">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">
+                                    <i class="bi-arrow-right"></i>
+                                </button>
+                            </div>
+                            <!-- End Input Card -->
+                        </form>
+                    </div>
+
+                    
+                </div>
+                <!-- End Filter -->
+
+                <div class="mb-10">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                        
+                        <!-- Card 1: Corrupción de Funcionarios -->
+                        <div class="col mb-5 apecc-course-card cat-penal cat-penal-corrupcion">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://apecc.com.pe/noticias/producto/corrupcion-de-funcionarios-crimen-organizado-y-analisis-del-caso/">
+                                    <img class="card-img-top" src="/Cursos/CFCAL.jpg" alt="Corrupción de Funcionarios, Crimen Organizado y Análisis del Caso">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-primary rounded-pill">En vivo</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Derecho Penal y Procesal Penal</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://apecc.com.pe/noticias/producto/corrupcion-de-funcionarios-crimen-organizado-y-analisis-del-caso/">
+                                                Corrupción de Funcionarios, Crimen Organizado y Análisis del Caso
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-mortarboard text-muted me-1"></i>
+                                            <span class="text-muted">Plana Especializada</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-laptop text-muted me-1"></i>
+                                            <span class="text-muted">Virtual / En vivo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-primary mb-0">S/ 200.00</h5>
+                                        </div>
+                                        <a class="btn btn-primary btn-sm btn-transition" href="https://apecc.com.pe/noticias/producto/corrupcion-de-funcionarios-crimen-organizado-y-analisis-del-caso/">
+                                            <i class="bi-cart-plus me-1"></i> Comprar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Conciliación Extrajudicial Familiar -->
+                        <div class="col mb-5 apecc-course-card cat-conciliacion cat-conciliacion-familiar">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://apecc.com.pe/noticias/producto/conciliacion-extrajudicial-familiar/">
+                                    <img class="card-img-top" src="/Cursos/conciliacion.jpg" alt="Conciliación Extrajudicial Familiar">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-primary rounded-pill">Especialización</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Conciliación Extrajudicial</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://apecc.com.pe/noticias/producto/conciliacion-extrajudicial-familiar/">
+                                                Conciliación Extrajudicial Familiar
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-mortarboard text-muted me-1"></i>
+                                            <span class="text-muted">Plana Docente APECC</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-laptop text-muted me-1"></i>
+                                            <span class="text-muted">Virtual / En vivo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-primary mb-0">S/ 300.00</h5>
+                                        </div>
+                                        <a class="btn btn-primary btn-sm btn-transition" href="https://apecc.com.pe/noticias/producto/conciliacion-extrajudicial-familiar/">
+                                            <i class="bi-cart-plus me-1"></i> Comprar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Formación de Conciliadores -->
+                        <div class="col mb-5 apecc-course-card cat-conciliacion cat-conciliacion-formacion">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://apecc.com.pe/noticias/producto/curso-de-formacion-y-capacitacion-de-conciliadores-extrajudiciales/">
+                                    <img class="card-img-top" src="/Cursos/conciliacion_2.jpg" alt="Curso de Formación y Capacitación de Conciliadores Extrajudiciales">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-success rounded-pill">Oficial MINJUS</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Conciliación Extrajudicial</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://apecc.com.pe/noticias/producto/curso-de-formacion-y-capacitacion-de-conciliadores-extrajudiciales/">
+                                                Curso de Formación y Capacitación de Conciliadores Extrajudiciales
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-award text-muted me-1"></i>
+                                            <span class="text-muted">R.M. 122-2000-JUS</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-shield-check text-muted me-1"></i>
+                                            <span class="text-muted">Acreditación Oficial</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-primary mb-0">S/ 380.00</h5>
+                                        </div>
+                                        <a class="btn btn-primary btn-sm btn-transition" href="https://apecc.com.pe/noticias/producto/curso-de-formacion-y-capacitacion-de-conciliadores-extrajudiciales/">
+                                            <i class="bi-cart-plus me-1"></i> Comprar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Especialización en Arbitraje -->
+                        <div class="col mb-5 apecc-course-card cat-arbitraje">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://apecc.com.pe/noticias/producto/curso-de-especializacion-en-arbitraje/">
+                                    <img class="card-img-top" src="/Cursos/Curso_especializacion.jpg" alt="Curso de Especialización en Arbitraje">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-primary rounded-pill">Especialización</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Arbitraje y Solución de Conflictos</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://apecc.com.pe/noticias/producto/curso-de-especializacion-en-arbitraje/">
+                                                Curso de Especialización en Arbitraje
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-mortarboard text-muted me-1"></i>
+                                            <span class="text-muted">Centro APECC</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-laptop text-muted me-1"></i>
+                                            <span class="text-muted">Virtual / En vivo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-primary mb-0">S/ 150.00</h5>
+                                        </div>
+                                        <a class="btn btn-primary btn-sm btn-transition" href="https://apecc.com.pe/noticias/producto/curso-de-especializacion-en-arbitraje/">
+                                            <i class="bi-cart-plus me-1"></i> Comprar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Delitos Contra Libertad Sexual -->
+                        <div class="col mb-5 apecc-course-card cat-penal cat-penal-delitos">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://apecc.com.pe/noticias/producto/seminario-sobre-delitos-contra-la-libertad-sexual-mineria-ilegal-y-corrupcion/">
+                                    <img class="card-img-top" src="/Cursos/Delitos_Contra_Libertad_smic.jpg" alt="Seminario sobre Delitos Contra la Libertad Sexual, Minería Ilegal y Corrupción">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-primary rounded-pill">Seminario</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Derecho Penal y Procesal Penal</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://apecc.com.pe/noticias/producto/seminario-sobre-delitos-contra-la-libertad-sexual-mineria-ilegal-y-corrupcion/">
+                                                Seminario sobre Delitos Contra la Libertad Sexual, Minería Ilegal y Corrupción
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-mortarboard text-muted me-1"></i>
+                                            <span class="text-muted">Plana Especializada</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-laptop text-muted me-1"></i>
+                                            <span class="text-muted">Virtual / En vivo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-primary mb-0">S/ 200.00</h5>
+                                        </div>
+                                        <a class="btn btn-primary btn-sm btn-transition" href="https://apecc.com.pe/noticias/producto/seminario-sobre-delitos-contra-la-libertad-sexual-mineria-ilegal-y-corrupcion/">
+                                            <i class="bi-cart-plus me-1"></i> Comprar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Pasantía Argentina -->
+                        <div class="col mb-5 apecc-course-card cat-pasantias cat-pasantia-argentina">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Argentina." target="_blank">
+                                    <img class="card-img-top" src="/Cursos/pasantia_argentina.jpg" alt="Pasantía Internacional en Litigación Oral - Argentina">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-danger rounded-pill"><i class="bi-globe me-1"></i> Internacional</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Pasantías Internacionales</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Argentina." target="_blank">
+                                                Pasantía Internacional en Litigación Oral - Argentina
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-geo-alt text-muted me-1"></i>
+                                            <span class="text-muted">Buenos Aires</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-building text-muted me-1"></i>
+                                            <span class="text-muted">Audiencias in situ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-success mb-0" style="font-size: 0.95rem;">Cupos limitados</h5>
+                                        </div>
+                                        <a class="btn btn-success btn-sm btn-transition" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Argentina." target="_blank">
+                                            <i class="bi-whatsapp me-1"></i> WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Pasantía Brasil -->
+                        <div class="col mb-5 apecc-course-card cat-pasantias cat-pasantia-brasil">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Brasil." target="_blank">
+                                    <img class="card-img-top" src="/Cursos/pasantia_brasil.jpg" alt="Pasantía Internacional en Derecho y Litigación - Brasil">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-danger rounded-pill"><i class="bi-globe me-1"></i> Internacional</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Pasantías Internacionales</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Brasil." target="_blank">
+                                                Pasantía Internacional en Derecho y Litigación - Brasil
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-geo-alt text-muted me-1"></i>
+                                            <span class="text-muted">Brasil</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-building text-muted me-1"></i>
+                                            <span class="text-muted">Audiencias in situ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-success mb-0" style="font-size: 0.95rem;">Cupos limitados</h5>
+                                        </div>
+                                        <a class="btn btn-success btn-sm btn-transition" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Brasil." target="_blank">
+                                            <i class="bi-whatsapp me-1"></i> WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Pasantía Miami -->
+                        <div class="col mb-5 apecc-course-card cat-pasantias cat-pasantia-miami">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Miami%20%28EE.UU.%29." target="_blank">
+                                    <img class="card-img-top" src="/Cursos/pasantia_miami.jpg" alt="Pasantía Internacional en Litigación Oral y Sistema Acusatorio - Miami (EE.UU.)">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-danger rounded-pill"><i class="bi-globe me-1"></i> Internacional</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Pasantías Internacionales</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Miami%20%28EE.UU.%29." target="_blank">
+                                                Pasantía Internacional en Litigación Oral - Miami (EE.UU.)
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-geo-alt text-muted me-1"></i>
+                                            <span class="text-muted">Miami (EE.UU.)</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-building text-muted me-1"></i>
+                                            <span class="text-muted">Cortes Federales</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-success mb-0" style="font-size: 0.95rem;">Cupos limitados</h5>
+                                        </div>
+                                        <a class="btn btn-success btn-sm btn-transition" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Miami%20%28EE.UU.%29." target="_blank">
+                                            <i class="bi-whatsapp me-1"></i> WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: Pasantía Medellín -->
+                        <div class="col mb-5 apecc-course-card cat-pasantias cat-pasantia-medellin">
+                            <div class="card card-flush shadow-none h-100">
+                                <a class="card-pinned" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Medell%C3%ADn%20%28Colombia%29." target="_blank">
+                                    <img class="card-img-top" src="/Cursos/pasantia_medellin.jpg" alt="Pasantía Internacional en Litigación Oral - Medellín (Colombia)">
+                                    <div class="card-pinned-top-start">
+                                        <small class="badge bg-danger rounded-pill"><i class="bi-globe me-1"></i> Internacional</small>
+                                    </div>
+                                </a>
+                                <div class="card-body">
+                                    <small class="text-primary">Pasantías Internacionales</small>
+                                    <div class="mb-3">
+                                        <h3 class="card-title h5 max-lines-2">
+                                            <a class="text-dark" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Medell%C3%ADn%20%28Colombia%29." target="_blank">
+                                                Pasantía Internacional en Litigación Oral - Medellín (Colombia)
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex align-items-top justify-content-between small">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-geo-alt text-muted me-1"></i>
+                                            <span class="text-muted">Medellín</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi-building text-muted me-1"></i>
+                                            <span class="text-muted">Audiencias in situ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer pt-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="me-2">
+                                            <h5 class="card-title text-success mb-0" style="font-size: 0.95rem;">Cupos limitados</h5>
+                                        </div>
+                                        <a class="btn btn-success btn-sm btn-transition" href="https://wa.me/51996894991?text=Hola%2C%20solicito%20informaci%C3%B3n%20sobre%20la%20Pasant%C3%ADa%20Internacional%20en%20Medell%C3%ADn%20%28Colombia%29." target="_blank">
+                                            <i class="bi-whatsapp me-1"></i> WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Col -->
+                    </div>
+                    <!-- End Row -->
+                </div>
+
+                
+
+
+
+<div class="text-end mb-5">
+    9 programas encontrados
+</div>
+
+<div class="">
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Anterior">
+                        <span aria-hidden="true">
+                            <i class="bi-chevron-double-left small"></i>
+                        </span>
+                    </a>
+                </li>
+            
+
+            
+                
+                    <li class="page-item active">
+                        <a class="page-link" href="?page=1">
+                            1
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="page-item ">
+                        <a class="page-link" href="?page=2">
+                            2
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="page-item ">
+                        <a class="page-link" href="?page=3">
+                            3
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="page-item ">
+                        <a class="page-link" href="?page=4">
+                            4
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">...</a>
+                    </li>
+                
+            
+                
+                    <li class="page-item ">
+                        <a class="page-link" href="?page=63">
+                            63
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="page-item ">
+                        <a class="page-link" href="?page=64">
+                            64
+                        </a>
+                    </li>
+                
+            
+
+            
+                <li class="page-item">
+                    <a class="page-link" href="?page=2"
+                       aria-label="Siguiente">
+                        <span aria-hidden="true">
+                            <i class="bi-chevron-double-right small"></i>
+                        </span>
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+</div>
+            </div>
+            <!-- End Col -->
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- End Card List -->
+
+    <!-- CTA -->
+    <div class="container content-space-b-2">
+        <div class="text-center bg-img-start py-6"
+             style="background: url(https://colegioabogados.org.pe/static/img/svg/components/shape-6.e726e47006ed.svg) center no-repeat;">
+            <div class="mb-5">
+                <h2>¿Listo para subir de nivel?</h2>
+                <p>Extiende tu carrera con nuestros diplomados en vivo.</p>
+            </div>
+
+            <a class="btn btn-primary btn-transition" href="/diplomados">
+                Explorar diplomados
+            </a>
+        </div>
+    </div>
+    <!-- End CTA -->
+<script is:inline>
+document.addEventListener('DOMContentLoaded', function () {
+        const filterButtons = document.querySelectorAll('.apecc-cat-filter');
+        const cards = document.querySelectorAll('.apecc-course-card');
+        const countEl = document.getElementById('apeccCourseCount');
+        const searchInput = document.getElementById('searchForm');
+
+        function applyFilter(cat) {
+            let visibleCount = 0;
+            cards.forEach(card => {
+                if (cat === 'all' || card.classList.contains(cat)) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            if (countEl) countEl.innerText = visibleCount + ' programas';
+        }
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                const filter = this.getAttribute('data-filter');
+                if (filter) {
+                    filterButtons.forEach(b => {
+                        b.classList.remove('active', 'text-primary', 'fw-bold');
+                        b.classList.add('text-muted');
+                    });
+                    this.classList.add('active', 'text-primary', 'fw-bold');
+                    this.classList.remove('text-muted');
+                    applyFilter(filter);
+                }
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', function () {
+                const q = this.value.toLowerCase().trim();
+                let visibleCount = 0;
+                cards.forEach(card => {
+                    const text = card.innerText.toLowerCase();
+                    if (!q || text.includes(q)) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                if (countEl) countEl.innerText = visibleCount + ' programas';
+            });
+        }
+    });
+</script>
+</Layout>

@@ -1,0 +1,200 @@
+---
+interface Props {
+  activePage?: string;
+}
+
+const { activePage = '' } = Astro.props;
+---
+
+<!-- Live Bar -->
+<div id="live-bar" class="d-none">
+    <a id="live-link" href="#" target="_blank" class="live-bar-inner text-white text-decoration-none" data-bs-toggle="tooltip">
+        <span class="live-badge">
+            <span class="live-dot"></span>
+            En Vivo
+        </span>
+        <span class="live-bar-text"></span>
+    </a>
+</div>
+<!-- End Live Bar -->
+
+<!-- ========== HEADER ========== -->
+<header id="header" class="navbar navbar-expand-lg navbar-end navbar-dark bg-dark"
+    data-hs-header-options='{
+        "fixMoment": 1000,
+        "fixEffect": "slide"
+      }'>
+
+    <div class="container-fluid px-xl-10 px-lg-5">
+        <nav class="js-mega-menu navbar-nav-wrap">
+            <!-- Toggler -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-default">
+                    <i class="bi-list"></i>
+                </span>
+                <span class="navbar-toggler-toggled">
+                    <i class="bi-x"></i>
+                </span>
+            </button>
+            <!-- End Toggler -->
+
+            <!-- Default Logo -->
+            <a class="navbar-brand" href="/" aria-label="APECC">
+                <img class="navbar-brand-logo d-none d-sm-block" src="/images/logo.webp" alt="APECC"
+                    style="min-width: initial; max-height: 3.5rem;">
+                <img class="navbar-brand-logo d-sm-none" src="/images/logo.webp" style="width: 38px; min-width: 38px"
+                    alt="APECC">
+            </a>
+            <!-- End Default Logo -->
+
+            <!-- Secondary Content -->
+            <div class="navbar-nav-wrap-secondary-content">
+                <!-- Search -->
+                <div class="dropdown dropdown-course-search d-xxl-none d-inline-block">
+                    <a class="btn btn-ghost-secondary btn-sm btn-icon" href="#" id="navbarCourseSearchDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi-search fs-4 text-white"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-card" aria-labelledby="navbarCourseSearchDropdown">
+                        <div class="card card-sm">
+                            <div class="card-body">
+                                <form class="input-group input-group-merge" action="/buscar/" autocomplete="off">
+                                    <input type="text" name="q" class="form-control"
+                                        placeholder="¿Qué estás buscando?" aria-label="¿Qué estás buscando?">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="bi-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Search -->
+
+                <a class="btn btn-warning btn-transition mx-2 d-none d-lg-inline-flex align-items-center fw-bold"
+                    href="https://apecc.com.pe/noticias/carrito/">
+                    <i class="bi-cart3 me-1"></i> Carrito
+                </a>
+                <a class="btn btn-warning btn-sm btn-transition d-lg-none"
+                    href="https://apecc.com.pe/noticias/carrito/">
+                    <i class="bi-cart3"></i>
+                </a>
+
+                <a class="btn btn-light btn-transition mx-3 d-none d-lg-block"
+                    href="https://aulavirtualapecc.com/aula/login/index.php" target="_blank">
+                    Mis cursos
+                </a>
+                <a class="btn btn-light btn-sm btn-transition d-lg-none"
+                    href="https://aulavirtualapecc.com/aula/login/index.php" target="_blank">
+                    Mis cursos
+                </a>
+            </div>
+
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- Nosotros Dropdown -->
+                    <li class="hs-has-sub-menu nav-item">
+                        <a class={`hs-mega-menu-invoker nav-link dropdown-toggle ${['nosotros', 'mision-y-vision', 'pasantias-internacionales', 'conciliacion-y-arbitraje'].includes(activePage) ? 'active' : ''}`}
+                            href="/nosotros" id="nosotrosMenu" role="button" aria-expanded="false">
+                            Nosotros
+                        </a>
+
+                        <div class="hs-sub-menu dropdown-menu" aria-labelledby="nosotrosMenu" style="min-width: 15rem;">
+                            <a class={`dropdown-item ${activePage === 'nosotros' ? 'active' : ''}`} href="/nosotros">¿Quiénes somos?</a>
+                            <a class={`dropdown-item ${activePage === 'mision-y-vision' ? 'active' : ''}`} href="/mision-y-vision">Misión y Visión</a>
+                            <a class={`dropdown-item ${activePage === 'pasantias-internacionales' ? 'active' : ''}`} href="/pasantias-internacionales">Pasantías Internacionales</a>
+                            <a class={`dropdown-item ${activePage === 'conciliacion-y-arbitraje' ? 'active' : ''}`} href="/conciliacion-y-arbitraje">Conciliación y Arbitraje</a>
+                        </div>
+                    </li>
+                    <!-- End Nosotros Dropdown -->
+
+                    <li class="nav-item">
+                        <a class={`nav-link ${activePage === 'cursos' ? 'active' : ''}`} href="/cursos-especializados">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class={`nav-link ${activePage === 'diplomados' ? 'active' : ''}`} href="/diplomados">Diplomados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class={`nav-link text-warning fw-bold ${activePage === 'libreria' ? 'active' : ''}`} href="/libreria">Librería</a>
+                    </li>
+
+                    <!-- News -->
+                    <li class="hs-has-sub-menu nav-item">
+                        <a class="hs-mega-menu-invoker nav-link dropdown-toggle" href="javascript:;" id="newsMenu"
+                            role="button" aria-expanded="false">Noticias</a>
+
+                        <div class="hs-sub-menu dropdown-menu" aria-labelledby="newsMenu" style="min-width: 15rem;">
+                            <!-- Jobs -->
+                            <div class="hs-has-sub-menu">
+                                <a class="hs-mega-menu-invoker dropdown-item dropdown-toggle" href="javascript:;"
+                                    id="jobsMenuDropDown" role="button" aria-expanded="false">
+                                    Convocatorias de trabajo
+                                </a>
+
+                                <div class="hs-sub-menu dropdown-menu" aria-labelledby="jobsMenuDropDown"
+                                    style="min-width: 230px;">
+                                    <a class="dropdown-item" href="https://www.convocatoriasdetrabajo.com/" target="_blank">
+                                        Convocatorias
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.bumeran.com.pe/" target="_blank">
+                                        Bumeran Perú
+                                    </a>
+                                    <a class="dropdown-item" href="https://pe.computrabajo.com/" target="_blank">
+                                        Computrabajo Perú
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Jobs -->
+
+                            <div class="hs-has-sub-menu">
+                                <a class="hs-mega-menu-invoker dropdown-item dropdown-toggle" href="javascript:;"
+                                    id="linksMenuDropDown" role="button" aria-expanded="false">
+                                    Enlaces de interés
+                                </a>
+
+                                <div class="hs-sub-menu dropdown-menu" aria-labelledby="linksMenuDropDown"
+                                    style="min-width: 230px;">
+                                    <a class="dropdown-item" href="https://www.tc.gob.pe/" target="_blank">
+                                        Tribunal Constitucional
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.pj.gob.pe/wps/wcm/connect/CorteSuprema/s_cortes_suprema_home/as_Inicio/" target="_blank">
+                                        Poder judicial
+                                    </a>
+                                    <a class="dropdown-item" href="https://spijweb.minjus.gob.pe/" target="_blank">
+                                        SPIJ
+                                    </a>
+                                    <a class="dropdown-item" href="https://cej.pj.gob.pe/cej/forms/busquedaform.html" target="_blank">
+                                        CEJ
+                                    </a>
+                                    <a class="dropdown-item" href="https://apps.pj.gob.pe/cejSupremo/" target="_blank">
+                                        CEJ-SUPREMO
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End News -->
+
+                    <!-- Search Form -->
+                    <li class="nav-item flex-grow-1 d-none d-xxl-inline-block me-3" style="max-width: 450px;">
+                        <form class="input-group input-group-merge" action="/buscar/" autocomplete="off">
+                            <div class="input-group-prepend input-group-text">
+                                <i class="bi-search"></i>
+                            </div>
+                            <input id="search-course-input-desktop" name="q" type="text"
+                                class="form-control bg-soft-light text-white" placeholder="¿Qué estás buscando?"
+                                aria-label="¿Qué estás buscando?">
+                        </form>
+                    </li>
+                    <!-- End Search Form -->
+                </ul>
+            </div>
+            <!-- End Collapse -->
+        </nav>
+    </div>
+</header>
+<!-- ========== END HEADER ========== -->
